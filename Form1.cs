@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace калькулятор
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -46,20 +47,20 @@ namespace калькулятор
         {
 
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
-            string label1 = textBox1.Text;
-            double l3 = Convert.ToDouble(label1);
-            if (l3 >= 0)
+            double chislo;
+            double.TryParse(textBox1.Text, out chislo);
+            
+            if (chislo >= 0  )
             {
-                double result = Math.Sqrt(l3 * 1.0);
+                double result = Math.Sqrt(chislo * 1.0);
                 textBox3.Text = result.ToString();
                
             }
             else
             {
-                double result = Math.Sqrt(Math.Abs(l3 * 1.0));
+                double result = Math.Sqrt(Math.Abs(chislo * 1.0));
                 textBox3.Text = result.ToString()+'i';
             }
 
@@ -67,7 +68,7 @@ namespace калькулятор
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -138,6 +139,14 @@ namespace калькулятор
             for (int i = 0; i < lenght; i++)
             {
                 textBox1.Text = textBox1.Text + text[i];
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "0")
+            {
+                textBox3.Text = " ";
             }
         }
     }
