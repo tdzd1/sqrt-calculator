@@ -129,5 +129,16 @@ namespace калькулятор
         {
             textBox1.Text = textBox1.Text + '-';
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            int lenght = textBox1.Text.Length - 1;
+            string text = textBox1.Text;
+            textBox1.Clear();
+            for (int i = 0; i < lenght; i++)
+            {
+                textBox1.Text = textBox1.Text + text[i];
+            }
+        }
     }
 }
