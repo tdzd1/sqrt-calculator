@@ -13,6 +13,7 @@ namespace калькулятор
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -55,20 +56,20 @@ namespace калькулятор
             if (chislo >= 0  )
             {
                 double result = Math.Sqrt(chislo * 1.0);
-                textBox3.Text = result.ToString();
+                textBox3.Text = "+-" + result.ToString();
                
             }
             else
             {
                 double result = Math.Sqrt(Math.Abs(chislo * 1.0));
-                textBox3.Text = result.ToString()+'i';
+                textBox3.Text = "+-"+ result.ToString()+'i';
             }
 
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            
+         
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -144,10 +145,20 @@ namespace калькулятор
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3.Text == "0")
+            if (textBox3.Text == "+-0")
             {
                 textBox3.Text = " ";
             }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

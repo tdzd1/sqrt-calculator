@@ -55,13 +55,14 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button19 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(690, 466);
+            this.button1.Location = new System.Drawing.Point(3, 475);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 25);
             this.button1.TabIndex = 0;
@@ -72,7 +73,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(12, 465);
+            this.button2.Location = new System.Drawing.Point(680, 476);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 25);
             this.button2.TabIndex = 1;
@@ -82,17 +83,18 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(12, 434);
+            this.button3.Location = new System.Drawing.Point(680, 414);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 25);
             this.button3.TabIndex = 2;
             this.button3.Text = "English language";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(12, 403);
+            this.button4.Location = new System.Drawing.Point(680, 383);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(108, 25);
             this.button4.TabIndex = 3;
@@ -307,12 +309,23 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(680, 445);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(108, 25);
+            this.button19.TabIndex = 29;
+            this.button19.Text = "Español";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(790, 503);
+            this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
@@ -375,6 +388,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button19;
     }
 }
 
