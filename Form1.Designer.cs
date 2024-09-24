@@ -57,6 +57,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -319,22 +320,34 @@
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F);
-            this.textBox2.Location = new System.Drawing.Point(708, 258);
+            this.textBox2.Location = new System.Drawing.Point(500, 252);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(24, 23);
             this.textBox2.TabIndex = 30;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(497, 261);
+            this.label1.Location = new System.Drawing.Point(530, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 14);
             this.label1.TabIndex = 31;
             this.label1.Text = "Укажите кол-во знаков после запятой";
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 469);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 30);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Техническая поддержка";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -342,6 +355,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(790, 503);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button19);
@@ -409,6 +423,7 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

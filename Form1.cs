@@ -172,6 +172,8 @@ namespace калькулятор
             label2.Text = "Introduzca una expresión raíz";
             label1.Text = "Especifique el número de decimales";
             button5.Text = "Considerar";
+            button1.Text = "Soporte técnico";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -180,6 +182,7 @@ namespace калькулятор
             label2.Text = "Enter the root expression";
             label1.Text = "Specify the number of decimal places";
             button5.Text = "Calculate";
+            button1.Text = "Technical support";
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -211,6 +214,7 @@ namespace калькулятор
             label2.Text = "Введите подкоренное выражение";
             label1.Text = "Укажите кол-во знаков после запятой";
             button5.Text = "Посчитать";
+            button1.Text = "Техническая поддержка";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -219,6 +223,22 @@ namespace калькулятор
             label2.Text = "输入根表达式";
             label1.Text = "指定小数位数";
             button5.Text = "计算方法";
+            button1.Text = "技术支持";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("");
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
