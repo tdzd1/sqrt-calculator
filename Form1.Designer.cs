@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -62,16 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 475);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Документация";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(204)));
@@ -81,6 +70,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "中国语文科";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -102,6 +92,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Русский язык";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // contextMenuStrip1
             // 
@@ -124,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(572, 57);
+            this.label3.Location = new System.Drawing.Point(495, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 26);
             this.label3.TabIndex = 11;
@@ -343,7 +334,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 14);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Укажите кол-во знаков полсе запятой";
+            this.label1.Text = "Укажите кол-во знаков после запятой";
             // 
             // Form1
             // 
@@ -376,9 +367,9 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Калькулятор корней";
             this.TransparencyKey = System.Drawing.Color.White;
@@ -390,8 +381,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
