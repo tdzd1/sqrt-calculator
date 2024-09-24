@@ -50,21 +50,38 @@ namespace калькулятор
         }
         private void button5_Click(object sender, EventArgs e)//При нажатии на кнопку 5(Посчитать)
         {
+            int kolvo_znakov;
             double chislo = Convert.ToDouble(textBox1.Text);//Строку из поля ввода конвертируем в тип double
-            int kolvo_znakov=Convert.ToInt32(textBox2.Text);//Строку из поля ввода кол-ва знаков полсе запятой конвертируем в тип int
+            bool isSuccsess=int.TryParse(textBox2.Text, out kolvo_znakov);//Строку из поля ввода кол-ва знаков полсе запятой конвертируем в тип int
 
-            if (chislo >= 0)//Если число больше либо равно 0
+            if (isSuccsess==true)
             {
-                double result = Math.Round(Math.Sqrt(chislo * 1.0), kolvo_znakov);//То в результат присваиваем квадратный корень числа с заданным кол-вом знаков полсе запятой
-                textBox3.Text = "+-" + result.ToString();//В поле поле для вывода выводится +- и значение корня
+                if (chislo >= 0)//Если число больше либо равно 0
+                {
+                    double result = Math.Round(Math.Sqrt(chislo * 1.0), kolvo_znakov);//То в результат присваиваем квадратный корень числа с заданным кол-вом знаков полсе запятой
+                    textBox3.Text = "+-" + result.ToString();//В поле поле для вывода выводится +- и значение корня
 
+                }
+                else//если число меньше 0
+                {
+                    double result = Math.Round(Math.Sqrt(Math.Abs(chislo * 1.0)), kolvo_znakov);//То в результат присваиваем квадратный корень модуля числа с заданным кол-вом знаков полсе запятой
+                    textBox3.Text = "+-" + result.ToString() + 'i';//В поле поле для вывода выводится +- и значение корня
+                }
             }
-            else//если число меньше 0
+            else
             {
-                double result = Math.Round(Math.Sqrt(Math.Abs(chislo * 1.0)), kolvo_znakov);//То в результат присваиваем квадратный корень модуля числа с заданным кол-вом знаков полсе запятой
-                textBox3.Text = "+-" + result.ToString() + 'i';//В поле поле для вывода выводится +- и значение корня
-            }
+                if (chislo >= 0)//Если число больше либо равно 0
+                {
+                    double result = Math.Sqrt(chislo * 1.0);//То в результат присваиваем квадратный корень числа с заданным кол-вом знаков полсе запятой
+                    textBox3.Text = "+-" + result.ToString();//В поле поле для вывода выводится +- и значение корня
 
+                }
+                else//если число меньше 0
+                {
+                    double result = Math.Sqrt(Math.Abs(chislo * 1.0));//То в результат присваиваем квадратный корень модуля числа с заданным кол-вом знаков полсе запятой
+                    textBox3.Text = "+-" + result.ToString() + 'i';//В поле поле для вывода выводится +- и значение корня
+                }
+            }
         }
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {

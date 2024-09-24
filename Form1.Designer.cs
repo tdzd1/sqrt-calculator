@@ -326,6 +326,8 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F);
             this.textBox2.Location = new System.Drawing.Point(708, 258);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
