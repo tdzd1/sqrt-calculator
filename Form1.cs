@@ -50,11 +50,11 @@ namespace калькулятор
         }
         private void button5_Click(object sender, EventArgs e)//При нажатии на кнопку 5(Посчитать)
         {
-            int kolvo_znakov;
+            int kolvo_znakov;//Вводим переменную, обозначающую сколько знаков нам нужно после запятой
             double chislo = Convert.ToDouble(textBox1.Text);//Строку из поля ввода конвертируем в тип double
-            bool isSuccsess=int.TryParse(textBox2.Text, out kolvo_znakov);//Строку из поля ввода кол-ва знаков полсе запятой конвертируем в тип int
+            bool isSuccsess=int.TryParse(textBox2.Text, out kolvo_znakov);//Пытаемся преобразовать число из поля для кол-ва знаков полсе запятой
 
-            if (isSuccsess==true)
+            if (isSuccsess==true)//Если смогли преобразовать, то используем функцию round
             {
                 if (chislo >= 0)//Если число больше либо равно 0
                 {
@@ -68,11 +68,11 @@ namespace калькулятор
                     textBox3.Text = "+-" + result.ToString() + 'i';//В поле поле для вывода выводится +- и значение корня
                 }
             }
-            else
+            else//Иначе в поле для ввода кол-ва знаков после запятой не было введено число, значит не используем функцию round
             {
                 if (chislo >= 0)//Если число больше либо равно 0
                 {
-                    double result = Math.Sqrt(chislo * 1.0);//То в результат присваиваем квадратный корень числа с заданным кол-вом знаков полсе запятой
+                    double result = Math.Sqrt(chislo);//То в результат присваиваем квадратный корень числа с заданным кол-вом знаков полсе запятой
                     textBox3.Text = "+-" + result.ToString();//В поле поле для вывода выводится +- и значение корня
 
                 }
@@ -139,7 +139,7 @@ namespace калькулятор
 
         private void button16_Click(object sender, EventArgs e)//При нажатии на кнопку 16(.)
         {
-            textBox1.Text = textBox1.Text + '.';//В поле ввода вводится .
+            textBox1.Text = textBox1.Text + ',';//В поле ввода вводится .
         }
 
         private void button17_Click(object sender, EventArgs e)//При нажатии на кнопку 17(-)
