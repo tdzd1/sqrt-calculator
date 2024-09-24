@@ -190,7 +190,7 @@ namespace калькулятор
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//Когда пользователь нажимает любую кнопку в поле для введение подкоренного выражения
         {
             char number = e.KeyChar;//Объявляем символьную переменную под названием char
-            if (!Char.IsDigit(number) && number != 8 && number != 46 && number != 45) //Если символ из переменной number не относится к категории десятичных цифр или клавише BackSpace или точку или минусу
+            if (!Char.IsDigit(number) && number != 8 && number != 44 && number != 45) //Если символ из переменной number не относится к категории десятичных цифр или клавише BackSpace или точку или минусу
             {
                 e.Handled = true;//Тогда не обрабатывать введенный символ
             }
