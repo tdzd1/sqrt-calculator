@@ -181,11 +181,6 @@ namespace калькулятор
 
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//Когда пользователь нажимает любую кнопку в поле для введение подкоренного выражения
         {
             char number = e.KeyChar;//Объявляем символьную переменную под названием char
